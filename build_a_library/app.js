@@ -57,7 +57,7 @@ class Book extends Media {
 //
 
 class Movies extends Media {
-  constructor(title, director, runTime) {
+  constructor(director, title, runTime) {
     super(title);
     this._director = director;
     this._runTime = runTime;
@@ -79,3 +79,14 @@ historyOfEverything.addRating(5);
 historyOfEverything.addRating(5);
 
 console.log(historyOfEverything.getAverageRating());
+
+// create Movie instance
+
+const speed = new Movies("Jan de Bont", "Speed", 116);
+
+console.log(speed);
+speed.toggleCheckOutStatus();
+speed.addRating(1);
+speed.addRating(1);
+speed.addRating(5);
+console.log(speed.getAverageRating());
